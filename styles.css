@@ -4,37 +4,6 @@ div {
 hr {
     margin-top:30px;
 }
-.input6, .input7, .input15{
-    width: 250px;
-    margin-bottom:15px;
-}
-.input15{
-    width: 450px;
-    margin-bottom:15px;
-}
 textarea {
-    width: 400px;
-}
-.name, .name-output1, .name-output2{
-    display: inline;
-}
-
-#footer {
-    margin-top: 100px;
-}
-.akap {
-    display: inline-block;
-}
-.akap:hover {
-    cursor: pointer;
-}
-.small {
-    margin-right: 35px;
-    display: inline-block;
-    width: 200px;
-}
-.smaller {
-    margin-right: 25px;
-    display: inline-block;
-    width: 30px;
+    width: 500px;
 }
