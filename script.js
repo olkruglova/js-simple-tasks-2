@@ -39,8 +39,24 @@ btn1.onclick = function () {
         console.log(num);
         largest =  Math.max.apply(Math, num);
         console.log(largest);
+        if (p.innerHTML == largest){
+            p.style.backgroundColor = 'red';
+        }
     }
-    if (p.innerHTML == largest){
-        p.style.backgroundColor = 'red';
-    }
+
 }
+/*
+task4: Дан инпут. Даны абзацы. Пусть в этот инпут записывается суммарное количество нажатий по этим абзацам. 
+*/
+var p1 = document.querySelectorAll('.akap');
+var result = document.querySelector('.input3');
+
+for (i=0;i<p1.length;i++){
+    p1[i].addEventListener('click', func)
+}
+var numberOfClicks = 0;
+function func(){
+        numberOfClicks ++;
+        result.value = numberOfClicks;
+}
+
