@@ -152,3 +152,27 @@ task9: Дан абзац. Дан массив цветов ['red', 'green', 'blu
         }
 }
 })();
+/*
+task10: Дан абзац. Дан массив строк ['один', 'два', 'три']. Под абзацем ссылка 'следующая строка'. По заходу на страницу в абзаце должен стоять нулевой элемент этого массива, а по нажатию на ссылку - вставлятся следующий элемент.
+*/
+(function(){
+    let outputs = document.querySelector('.zdanie');
+    let zdania = ['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu enim ullamcorper, rutrum diam vel, dictum tortor.',
+            'Integer et orci consectetur, rutrum augue id, volutpat urna.',
+            'Aliquam venenatis eget dui vel condimentum.',
+            'Maecenas vitae sollicitudin lacus. Aenean vestibulum enim id diam molestie, eu porttitor erat tempus.',
+            'Morbi ut quam luctus, ornare augue vestibulum, euismod dolor. Suspendisse consequat non odio vitae tincidunt.',
+            'Vivamus odio quam, pulvinar nec mattis at, sollicitudin posuere nulla. Nam lectus leo, sagittis non augue et, consequat egestas tortor.',
+            'Praesent consequat interdum mi, quis congue lorem malesuada ac. Sed pretium, diam at posuere pretium, mi lorem vestibulum neque, vel eleifend tortor urna ac lectus.',
+            'Vestibulum congue est vitae nisi euismod, ut vehicula sem luctus. Vivamus sed gravida elit.']
+    let content = outputs.innerHTML = zdania[0];
+    let i = 1;
+    let butt = document.querySelector('.btn3');
+    butt.onclick = function(){
+        content = outputs.innerHTML = zdania[i];
+        i+=1;
+        if (i>=zdania.length) {
+            i = 0;
+        }
+    }
+})();
