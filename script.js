@@ -75,18 +75,37 @@ function timer() {
 /*
 task6: Дан инпут и кнопка. По нажатию на кнопку сгенерируйте случайную строку из 8-ми символов и запишите в инпут.
 Модифицируйте предыдущую задачу так, чтобы был еще один инпут, в котором задается длина случайной строки
+Модифицируйте предыдущую задачу так, чтобы был еще один инпут, в котором задаются символы, из которых формируется эта случайна строка. Символы задаются без всяких разделитетей, в одну строку
 */
 
 var output = document.getElementById('result2');
 var input = document.getElementById('result1');
+var inputLet = document.getElementById('inputLet');
 var gen = document.querySelector('.btn2');
 gen.addEventListener('click', funcGen);
 
 function funcGen() {
-	var str = '';
-	var symbols = '0123456789qwertyuiopasdfghjklzxcvbnm';
+    var str = '';
+	var symbols = inputLet.value;
 	for(var i = 0; i < input.value; i++){
 		str += symbols.charAt(Math.floor(Math.random() * symbols.length));
 		output.value = str;
 	}
+}
+/*
+task7: Дан инпут. В него вводится число. По потери фокуса сделайте так, чтобы в абзаце ниже начал тикать обратный отсчет, начиная с введенного числа. Когда отсчет дойдет до нуля - он должен закончится
+*/
+var st = document.getElementById('inputLicz');
+
+function funcGo(){
+    window.funcStart = window.setInterval(countdown, 1000);
+}
+function countdown(){
+    st.value -= 1;
+    if (st.value == 0) {
+        stop();
+    }
+}
+function stop() {
+	window.clearInterval(window.funcStart);
 }
