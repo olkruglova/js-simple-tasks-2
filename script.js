@@ -109,3 +109,46 @@ function countdown(){
 function stop() {
 	window.clearInterval(window.funcStart);
 }
+/*
+task8: Дан абзац. Сделайте так, чтобы каждую секунду он менял свой цвет с красного на зеленый и наоборот.
+*/
+(function(){
+    var textColor = document.querySelector('.textColor');
+
+    window.setInterval(red, 1000);
+    function red () {
+        textColor.style.color = "red";
+        setTimeout(yellow,1000);
+    function yellow () {
+        textColor.style.color = "yellow";
+        setTimeout(green,1000);
+    }
+    function green () {
+        textColor.style.color = "green";
+        setTimeout(blue,1000);
+    }
+    function blue () {
+        textColor.style.color = "lightblue";
+        setTimeout(red,1000);
+    }
+    }
+})();
+/*
+task9: Дан абзац. Дан массив цветов ['red', 'green', 'blue']. Сделайте так, чтобы каждую секунду абзац менял свой цвет на определенное значение их массива: сначала 'red', потом 'green' и так далее. Как только цвета в массиве закончатся - все начнется сначала. Количество цветов в массиве может быть любым
+*/
+(function(){
+    let color = document.getElementById('color');
+
+    window.setInterval(changeColor, 1000);
+
+    let colors = ['grey', 'yellow', 'blue', 'red', 'green', 'orange'];
+    let i = 0;
+
+    function changeColor () {
+        color.style.color = colors[i];
+        i++;
+        if (i >= colors.length) {
+            i = 0;
+        }
+}
+})();
