@@ -4,6 +4,6 @@ div {
 hr {
     margin-top:30px;
 }
-textarea {
+textarea, #result2 {
     width: 500px;
 }

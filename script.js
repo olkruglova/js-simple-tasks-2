@@ -73,4 +73,20 @@ function timer() {
 	dano.value = dano.value * dano.value;
 }
 /*
-task6: 
+task6: Дан инпут и кнопка. По нажатию на кнопку сгенерируйте случайную строку из 8-ми символов и запишите в инпут.
+Модифицируйте предыдущую задачу так, чтобы был еще один инпут, в котором задается длина случайной строки
+*/
+
+var output = document.getElementById('result2');
+var input = document.getElementById('result1');
+var gen = document.querySelector('.btn2');
+gen.addEventListener('click', funcGen);
+
+function funcGen() {
+	var str = '';
+	var symbols = '0123456789qwertyuiopasdfghjklzxcvbnm';
+	for(var i = 0; i < input.value; i++){
+		str += symbols.charAt(Math.floor(Math.random() * symbols.length));
+		output.value = str;
+	}
+}
